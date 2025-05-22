@@ -4,11 +4,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
+import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { Autoplay, EffectFade, FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import Slide from './Slide';
 
 const Hero = () => {
@@ -50,9 +51,13 @@ const Hero = () => {
         loop={true}
         spaceBetween={10}
         navigation={true}
-        autoplay={true}
+         autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[EffectFade, FreeMode, Navigation, Thumbs,Autoplay]}
+        effect={"fade"}
         className="mySwiper2"
       >
         {
@@ -64,17 +69,20 @@ const Hero = () => {
         }
 
       </Swiper>
-      <Swiper
-        onSwiper={setThumbsSwiper}
-        loop={true}
-        autoplay={true}
-        spaceBetween={10}
-        slidesPerView={2}
-        freeMode={true}
-        watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper w-[400px] mx-auto !absolute bottom-0 translate-[-50%] left-[50%]"
-      >
+       <Swiper
+      onSwiper={setThumbsSwiper}
+      loop={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      spaceBetween={10}
+      slidesPerView={2}
+      freeMode={true}
+      watchSlidesProgress={true}
+      modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+      className="mySwiper w-[400px] mx-auto !absolute bottom-0 translate-[-50%] left-[50%]"
+    >
         {
           sliderContent.map(content => (
             <SwiperSlide className='flex justify-content-center'>

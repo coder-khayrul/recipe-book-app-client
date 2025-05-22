@@ -6,8 +6,8 @@ import Button from '../ui/Button';
 const Header = () => {
     const navLinks = <>
         <li className='text-white'><NavLink to={"/"}>Home</NavLink></li>
-        <li className='text-white'><NavLink to={"all-recipe"}>All Recipe</NavLink></li>
-        <li className='text-white'><NavLink to={"my-recipe"}>My Recipe</NavLink></li>
+        <li className='text-white'><NavLink to={"/all-recipe"}>All Recipe</NavLink></li>
+        <li className='text-white'><NavLink to={"/my-recipe"}>My Recipe</NavLink></li>
     </>
 
     return (

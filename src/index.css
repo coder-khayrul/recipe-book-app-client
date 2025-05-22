@@ -4,33 +4,52 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@theme{
+@theme {
   --color-main-light: #102B2A;
   --color-main-dark: #091D1C;
   --color-third: #C09342;
 }
 
-*{
+* {
   font-family: "Playfair Display", serif;
 }
-a.active{
+
+a.active {
   color: #C09342;
 }
-.hero-overlay{
+
+.hero-overlay {
   background-color: color-mix(in oklab, var(--color-neutral) 70%, transparent);
 }
-.swiper-slide.swiper-slide-thumb-active > .themb-box{
-  background-color:  #102B2A;
+
+.swiper-slide.swiper-slide-thumb-active>.themb-box {
+  background-color: #102B2A;
 }
-.swiper-slide.swiper-slide-thumb-active > .themb-box img{
+
+.swiper-slide.swiper-slide-thumb-active>.themb-box img {
   outline-color: white;
 }
-.swiper-slide.swiper-slide-thumb-active > .themb-box .themb-category{
+
+.swiper-slide.swiper-slide-thumb-active>.themb-box .themb-category {
   background-color: white;
   color: #102B2A;
 }
-.swiper-button-prev,.swiper-button-next{
-  width: 50px;
-  height: 50px;
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 60px !important;
+  height: 60px !important;
   border-radius: 100%;
+  background: #102B2A;
+    transition: .6s;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+  background: #C09342;
+  transition: .6s;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 25px !important;
+  
 }
