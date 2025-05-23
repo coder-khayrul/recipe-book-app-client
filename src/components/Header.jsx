@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
-import Container from '../ui/Container';
 import Button from '../ui/Button';
+import Container from '../ui/Container';
 
 const Header = () => {
     const navLinks = <>
@@ -34,9 +34,12 @@ const Header = () => {
                     <img className='w-30 md:w-50' src="./image/recipe-log.png" alt="" />
                 </a>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end gap-5">
+                <Link to={"/login"}>
+                <Button btnText="Login" btnType="second"></Button>
+                </Link>
                 <Link>
-                <Button btnText="Get Started" btnType="second"></Button>
+                <Button btnText="Register" btnType="primary"></Button>
                 </Link>
             </div>
         </div>

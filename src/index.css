@@ -8,6 +8,9 @@
   --color-main-light: #102B2A;
   --color-main-dark: #091D1C;
   --color-third: #C09342;
+  --shadow-custom: #ededed10 0px 3px 6px, #ededed10 0px 3px 6px;
+
+  /* --shadow-custom: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
 }
 
 * {
