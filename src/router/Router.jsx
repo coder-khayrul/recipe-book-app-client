@@ -5,6 +5,7 @@ import AllRecipe from "../pages/AllRecipe";
 import MyRecipe from "../pages/MyRecipe";
 import ErrorPage from "../pages/ErrorPage";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 //https://i.ibb.co/5XKK9t5h/recipe-1.png
 //https://i.ibb.co/fzMMwBfr/recipe-2.png
 //https://i.ibb.co/ZzfnMjNc/recipe-3.png
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
             {
                 path: "/login",
                 Component: Login
+            },
+            {
+                path: "/register",
+                Component: Register
             },
             {
                 path: "/all-recipe",
